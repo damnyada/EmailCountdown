@@ -139,7 +139,7 @@ if (ord($this->buffer [0] { 10 }) & 0x80) {
 $cmap = 3 * ( 2 << ( ord($this->buffer [0] { 10 }) & 0x07 ) );
 $this->image .= substr($this->buffer [0], 6, 7);
 $this->image .= substr($this->buffer [0], 13, $cmap);
-$this->image .= "!\377\13NETSCAPE2.0\3\1" . $this->word($this->number_of_loops) . "\0";
+$this->image .= "!\377\13NETSCAPE2.0\3\1" . $this->word(0) . "\0";
 }
 }
  
